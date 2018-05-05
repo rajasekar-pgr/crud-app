@@ -5,7 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   
-
+    { path: '', component: SigninComponent },
     { path: 'login', component: SigninComponent },
     { path: 'register', component: SignupComponent },
       
@@ -20,4 +20,3 @@ const routes: Routes = [
       console.log('AuthRoutingModule');
     }
   }
-  
