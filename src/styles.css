@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("assets/css/bootstrap.min.css");
+@import url("assets/css/demo.css");
+@import url("assets/css/material-dashboard5438.css");
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");

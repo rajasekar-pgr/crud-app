@@ -1,3 +1,62 @@
-<p>
-  signin works!
-</p>
+<div class="full-page login-page" filter-color="black" data-image="../../assets/img/login.jpg">
+  <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+  <div class="content">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                  <form name="form" (ngSubmit)="f.form.valid && login(f)" #f="ngForm" novalidate >
+                      <div class="card card-login card-hidden">
+                          <div class="card-header text-center" data-background-color="rose">
+                              <h4 class="card-title">CRUD - APP</h4>
+                              <div class="social-line">
+                                  <a href="#btn" class="btn btn-just-icon btn-simple">
+                                      <i class="fa fa-facebook-square"></i>
+                                  </a>
+                                  <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                      <i class="fa fa-twitter"></i>
+                                  </a>
+                                  <a href="#eugen" class="btn btn-just-icon btn-simple">
+                                      <i class="fa fa-google-plus"></i>
+                                  </a>
+                              </div>
+                          </div>
+                          <p class="category text-center">
+                              Or Be Classical
+                          </p>
+                          <div class="card-content">
+                            
+                              <div class="input-group">
+                                  <span class="input-group-addon">
+                                      <i class="material-icons">person</i>
+                                  </span>
+                                  <div class="form-group label-floating" [ngClass]="{ 'has-error': f.submitted && !emailId.valid }">
+                                      <label for="emailId" class="control-label">Username</label>
+                                      <input type="text" class="form-control" name="emailId" [(ngModel)]="userObj.email" #emailId="ngModel" required>
+                                      <div *ngIf="f.submitted && !emailId.valid" class="help-block">Email is required</div>
+                                  </div>
+                              </div>
+                              <div class="input-group">
+                                  <span class="input-group-addon">
+                                      <i class="material-icons">lock_outline</i>
+                                  </span>
+                                  <div class="form-group label-floating" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                                      <label for="password" class="control-label">Password</label>
+                                      <input type="password" class="form-control" name="password" [(ngModel)]="userObj.password" #password="ngModel" required>
+                                      <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="footer text-center">
+                              <button type="submit" class="btn btn-rose btn-simple btn-wd btn-lg">Login</button>
+                              <a routerLink="/login" class="auth-link" style="color: #e91e63;text-decoration: none;">Sign up</a>
+                          </div>
+                         
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+
