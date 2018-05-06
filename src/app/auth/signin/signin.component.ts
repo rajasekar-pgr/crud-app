@@ -16,6 +16,8 @@ export class SigninComponent implements OnInit {
 
   login(f){
 
+    console.log("test");
+
   }
 
 }
