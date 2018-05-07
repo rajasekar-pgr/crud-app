@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -9,14 +10,14 @@ export class SigninComponent implements OnInit {
 
   userObj:object = [];
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
 
   login(f){
-
     console.log("test");
+    this.router.navigate(['/dashboard']);
 
   }
 
